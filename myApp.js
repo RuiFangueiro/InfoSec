@@ -3,9 +3,12 @@ const helmet = require("helmet");
 const app = express();
 
 app.use(helmet());
-app.get("/", (req, res) => {
-  res.sendStatus(200);
-});
+app.use(helmet.hidePoweredBy());
+
+
+
+
+
 
 module.exports = app;
 const api = require("./server.js");
